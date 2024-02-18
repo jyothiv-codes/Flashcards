@@ -1,0 +1,34 @@
+.flashcard {
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .flashcard .flashcard-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .flashcard.front .flashcard-inner {
+    transform: rotateY(0deg);
+  }
+  
+  .flashcard.back .flashcard-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard p {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+  }
+  

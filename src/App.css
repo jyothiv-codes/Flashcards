@@ -1,38 +1,60 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #ffffff; /* White background */
 }
 
-.App-link {
-  color: #61dafb;
+.flashcard-container {
+  perspective: 1000px;
+  width: 200px; /* Set width */
+  height: 200px; /* Set height */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flashcard {
+  width: 100%; /* Occupy full width of container */
+  height: 100%; /* Occupy full height of container */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  border: 2px solid #87ceeb; /* Sky blue border */
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #ffffff; /* White background */
+  color: #9400d3; /* Violet color for question */
+  font-weight: bold; /* Bold text */
+}
+
+.back {
+  background-color: #ffffff; /* White background */
+  color: #008000; /* Green text */
+  font-weight: bold; /* Bold text */
+  transform: rotateY(180deg);
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  margin: 0 10px;
 }
