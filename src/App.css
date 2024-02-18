@@ -4,23 +4,23 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; 
 }
 
 .flashcard-container {
   perspective: 1000px;
-  width: 200px; /* Set width */
-  height: 200px; /* Set height */
+  width: 200px; 
+  height: 200px; 
 }
 
 .flashcard {
-  width: 100%; /* Occupy full width of container */
-  height: 100%; /* Occupy full height of container */
+  width: 100%; 
+  height: 100%; 
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-  border: 2px solid #87ceeb; /* Sky blue border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 2px solid #87ceeb; 
 }
 
 .flashcard.flipped {
@@ -39,15 +39,15 @@
 }
 
 .front {
-  background-color: #ffffff; /* White background */
-  color: #9400d3; /* Violet color for question */
-  font-weight: bold; /* Bold text */
+  background-color: #ffffff; 
+  color: #9400d3; 
+  font-weight: bold; 
 }
 
 .back {
-  background-color: #ffffff; /* White background */
-  color: #008000; /* Green text */
-  font-weight: bold; /* Bold text */
+  background-color: #ffffff; 
+  color: #008000; 
+  font-weight: bold; 
   transform: rotateY(180deg);
 }
 
