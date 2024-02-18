@@ -7,7 +7,10 @@ const flashcardsData = [
   { question: 'Buenos días', answer: 'Good morning' },
   { question: 'Por favor', answer: 'Please' },
   { question: 'Gracias', answer: 'Thank you' },
-  { question: 'Lo siento', answer: 'I\'m sorry' }
+  { question: 'Mucho gusto', answer: 'Nice to meet you' },
+  { question: 'Me gusta', answer: 'I like it' },
+  { question: 'Estoy bien', answer: 'I\'m fine' }
+
 ];
 
 function shuffle(array) {
